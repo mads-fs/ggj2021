@@ -73,4 +73,5 @@ public class Interactable : MonoBehaviour
     }
 
     public void SetState(bool state) => _isActive = state;
+    public bool GetIsMouseOver() => _isMouseOver;
 }

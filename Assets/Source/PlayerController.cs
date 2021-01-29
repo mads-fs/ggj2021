@@ -37,6 +37,13 @@ public class PlayerController : MonoBehaviour
                 if (Physics.Raycast(_mainCamera.ScreenPointToRay(Input.mousePosition), out hit, Mathf.Infinity))
                 {
                     _agent.destination = hit.point;
+                    if (_useObject != null)
+                    {
+                        if (_useObject.GetIsMouseOver() == false)
+                        {
+                            CancelInteractableRouting();
+                        }
+                    }
                 }
             }
 
@@ -68,6 +75,12 @@ public class PlayerController : MonoBehaviour
     {
         _isDestinationUse = true;
         _useObject = endInteractable;
+    }
+
+    public void CancelInteractableRouting()
+    {
+        _isDestinationUse = false;
+        _useObject = null;
     }
 
     public void PrintMessage(string value) => Debug.Log(value);
