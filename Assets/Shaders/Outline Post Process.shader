@@ -91,9 +91,16 @@
 
 				// return color;
 				float edge = max(edgeDepth, edgeNormal);
-				if (edge < 1 && colorMatch(color, float4(100, 0, 0, 1)))
+				if (edge < 1 && (
+					colorMatch(color, float4(100, 0, 0, 1)) ||
+					colorMatch(color, float4(1, .1, 0, 1)) ||
+					colorMatch(color, float4(1, 0, 0, 1)) ||
+					colorMatch(color, float4(0, 0.3, 1, 1))
+				))
 					return color;
 				else if (edge < 1 && colorMatch(color, float4(.5, .1, 0, 1)))
+					return color;
+				else if (edge < 1 && colorMatch(color, float4(1, .1, 0, 1)))
 					return color;
 				// color = max(edge, color);
 				return edge;
