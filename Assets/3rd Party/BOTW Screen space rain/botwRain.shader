@@ -14,6 +14,7 @@
 		_Speed("Speed", float) = 1
 		_Attenuation("Attenuation", float) = 0
 		_RainScale("Scale", Vector) = (1, 1, 1, 1)
+		_RainContrast("Contrast", float) = .1
 	}
 	SubShader
 	{
@@ -68,6 +69,7 @@
 			
 			float Pi = 3.14;
 			float2 _RainScale;
+			float _RainContrast;
 
 			fixed4 frag (v2f i) : SV_Target
 			{
@@ -122,15 +124,21 @@
 				uv.y +=  _Time.y * _Speed;
 				float4 rainTex00 = tex2D(_RainTex, uv * _RainScale);
 				rainTex00 -= _Attenuation;
+				// return rainTex00;
+				// rainTex00 -= _Attenuation;
+				// return rainTex00;
+				// rainTex00.rgb = ((rainTex00.rgb - 0.5f) * max(_RainContrast, 0)) + 0.5f;
 				// rainTex00 *= float4(1, 0, 0, 0);
 
 
-				float4 rainTex01 = tex2D(_RainTex, uv * _RainScale);
-				rainTex01 -= _Attenuation;
-				// rainTex01 *= float4(0, 1, 0, 0);
-
-				float4 rainTex = max(rainTex00, rainTex01);
-				return max(rainTex, col);
+				// float4 rainTex01 = tex2D(_RainTex, uv * _RainScale);
+				// rainTex01 -= _Attenuation;
+				// // rainTex01 *= float4(0, 1, 0, 0);
+				//
+				// float4 rainTex = max(rainTex00, rainTex01);
+				float4 ret = max(rainTex00, col);
+				// ret.rgb = ((ret.rgb - 0.5f) * max(_RainContrast, 0)) + 0.5f;
+				return ret;
 			}
 			ENDCG
 		}

@@ -31,7 +31,7 @@
             int _DeptEdge;
             int _NormalEdge;
             int _UseColor;
-
+            
 			// Combines the top and bottom colors using normal blending.
 			// https://en.wikipedia.org/wiki/Blend_modes#Normal_blend_mode
 			// This performs the same operation as Blend SrcAlpha OneMinusSrcAlpha.
@@ -41,6 +41,15 @@
 				float alpha = top.a + bottom.a * (1 - top.a);
 
 				return float4(color, alpha);
+			}
+
+            bool colorMatch(float4 a, float4 b)
+			{
+				float tolerance = .1;
+
+				return abs(a.r - b.r) < tolerance &&
+						abs(a.g - b.g) < tolerance &&
+						abs(a.b - b.b) < tolerance;
 			}
 
 			float4 Frag(VaryingsDefault i) : SV_Target
@@ -80,12 +89,17 @@
 								
 				float4 color = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord);
 
+				// return color;
 				float edge = max(edgeDepth, edgeNormal);
-				if (edge < 1 && color.r == 1 && color.g == 0 && color.b == 0)
-					return color * 100;
+				if (edge < 1 && colorMatch(color, float4(100, 0, 0, 1)))
+					return color;
+				else if (edge < 1 && colorMatch(color, float4(.5, .1, 0, 1)))
+					return color;
 				// color = max(edge, color);
 				return edge;
 			}
+
+            
 			ENDHLSL
 		}
     }
