@@ -92,15 +92,13 @@
 				// return color;
 				float edge = max(edgeDepth, edgeNormal);
 				if (edge < 1 && (
-					colorMatch(color, float4(100, 0, 0, 1)) ||
-					colorMatch(color, float4(1, .1, 0, 1)) ||
-					colorMatch(color, float4(1, 0, 0, 1)) ||
-					colorMatch(color, float4(0, 0.3, 1, 1))
+					   colorMatch(color, float4(100, 0, 0, 1))		// glowing red
+					|| colorMatch(color, float4(.5, .1, 0, 1))		// hat brown
+					|| colorMatch(color, float4(1, 0, 0, 1))		// dress red
+					|| colorMatch(color, float4(0, 0.3, 1, 1))		// police blue
+					// || colorMatch(color, float4(0.75, 0.6,0, 1))	// hair yellow
+					
 				))
-					return color;
-				else if (edge < 1 && colorMatch(color, float4(.5, .1, 0, 1)))
-					return color;
-				else if (edge < 1 && colorMatch(color, float4(1, .1, 0, 1)))
 					return color;
 				// color = max(edge, color);
 				return edge;
