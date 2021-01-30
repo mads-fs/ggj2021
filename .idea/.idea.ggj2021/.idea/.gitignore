@@ -1,0 +1,11 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.ggj2021.iml
+# Datasource local storage ignored files
+/../../../../../../../../:\Users\chris\dev\ggj2021\.idea\.idea.ggj2021\.idea/dataSources/
+/dataSources.local.xml
