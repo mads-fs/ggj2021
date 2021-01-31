@@ -31,6 +31,9 @@ https://gitlab.com/omniowl-public/ggj2021
 Shaders inspired by:
 - thnewlands - unity-botw-screenspace-rain
 
+Voice Acting
+- Dave - SONANTIC https://www.sonantic.io/
+
 Additional SFX: freesound.org
 - InspectorJ (modified) https://freesound.org/people/InspectorJ/sounds/401275/
 - Breviceps https://freesound.org/people/Breviceps/sounds/457531/
