@@ -10,8 +10,16 @@ public class SkipCutscene : MonoBehaviour {
     void Update() {
         if (Input.GetButtonDown("Jump")) {
             foreach (var director in directors)
-                if (director.playableGraph.IsPlaying())
-                    director.Stop();
+                if (director.playableGraph.IsValid())
+                    if (director.playableGraph.IsPlaying()) {
+                        Time.timeScale = 50;
+                        return;
+                    }
         }
+    }
+
+    public void ResetTimescale() {
+        print("reset");
+        Time.timeScale = 1;
     }
 }
