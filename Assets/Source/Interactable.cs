@@ -19,7 +19,6 @@ public class Interactable : MonoBehaviour
 
     private void Start()
     {
-        _player = FindObjectOfType<PlayerController>();
         _mainCam = Camera.main;
         if (ActivatedObject != null)
         {
@@ -58,6 +57,7 @@ public class Interactable : MonoBehaviour
             {
                 if (Input.GetMouseButtonDown(0))
                 {
+                    _player = FindObjectOfType<PlayerController>();
                     _player.SetInteractableRouting(this);
                 }
             }
