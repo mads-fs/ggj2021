@@ -1,3 +1,32 @@
 # ggj2021
 
 A Global Game Jam 2021 Entry by Chris Carvelli, Christoffer Krakou and Mads Sønderstrup. The theme was Lost and Found.
+
+## Credits
+
+Chris "Takki" Carvelli (Graphic Programming, graphic design)
+- @carve_chris
+- chriscarvelli.cc
+
+Christoffer Krakou
+- www.krakou.dk
+- @chriskrakou
+
+Mads F. Sønderstup
+- http://madsolutions.dk/
+- @DynMads
+
+
+Source code available at:
+https://gitlab.com/omniowl-public/ggj2021
+
+### Third Parties
+
+Shaders inspired by:
+- thnewlands - unity-botw-screenspace-rain
+
+Additional SFX: freesound.org
+- InspectorJ (modified) https://freesound.org/people/InspectorJ/sounds/401275/
+- Breviceps https://freesound.org/people/Breviceps/sounds/457531/
+- LayZerg https://freesound.org/people/LayZerg/sounds/445007/
+- andrest2003 https://freesound.org/people/andrest2003/sounds/524913/
