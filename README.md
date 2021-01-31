@@ -1,7 +1,13 @@
-# ggj2021
+# Despeair Alley
 
 A Global Game Jam 2021 Entry by Chris Carvelli, Christoffer Krakou and Mads Sønderstrup. The theme was Lost and Found.
 
+![femme_fatale](media/femme_fatale.gif)
+
+## Accessibility Notes
+The game needs only a mouse to be played.
+
+The "Play" and "Credits" text in the first scene are buttons. You should see a halo around them while hovering with the mouse. This means they are clickable
 ## Credits
 
 Chris "Takki" Carvelli (Graphic Programming, graphic design)
