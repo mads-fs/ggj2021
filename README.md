@@ -29,7 +29,9 @@ https://gitlab.com/omniowl-public/ggj2021
 ### Third Parties
 
 Shaders inspired by:
-- thnewlands - unity-botw-screenspace-rain
+- 
+- [roystan - outline-shader](https://roystan.net/articles/outline-shader.html?fbclid=IwAR26tdfinzWb-BeAy2yOXpFRKdG9VrWmvhqc0iBNNL5jBbPBpW3wt606fbw)
+- [thnewlands - unity-botw-screenspace-rain](https://github.com/thnewlands/unity-botw-screenspace-rain)
 
 Voice Acting
 - Dave - SONANTIC https://www.sonantic.io/
