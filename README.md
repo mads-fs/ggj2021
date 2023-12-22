@@ -11,20 +11,15 @@ The "Play" and "Credits" text in the first scene are buttons. You should see a h
 ## Credits
 
 Chris "Takki" Carvelli (Graphic Programming, graphic design)
+- https://chriscarvelli.cc
 - @carve_chris
-- chriscarvelli.cc
 
 Christoffer Krakou
-- www.krakou.dk
+- https://www.krakou.dk
 - @chriskrakou
 
 Mads F. Sønderstup
-- http://madsolutions.dk/
-- @DynMads
-
-
-Source code available at:
-https://gitlab.com/omniowl-public/ggj2021
+- http://hiremads.today
 
 ### Third Parties
 
